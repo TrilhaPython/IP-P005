@@ -435,11 +435,11 @@ def main():
     #print(((ListaNomes.listarEmOrdem(nomes))))
     lista_nomes=str(nomes).split(', ');
     #lista_salarios = [float(salario) for salario in lista_salarios]
-    #lista_salarios=str(salarios).split(', ');
-    #lista_salarios = [float(salario) for salario in lista_salarios]
-    lista_salarios = [float(salario) for salario in salarios.split(',')]
-    #print(lista_nomes)
-    zipped=zip(lista_nomes, salarios)
+    lista_salarios=str(salarios).split(', ');
+    lista_salarios = [float(salario) for salario in lista_salarios]
+    #lista_salarios = [float(salario) for salario in str(salarios).split(',')]
+    #print(lista_salarios)
+    zipped=zip(lista_nomes, lista_salarios)
     print((list(zipped)))
     #print("Zipped:"+str(Utils.zipped))
     custo_folha = sum(map(reajustar_salario, lista_salarios))
